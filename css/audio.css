@@ -1,0 +1,169 @@
+/**/
+/* CSS for Audio Blind Test app */
+/**/
+body {
+  padding-top: 2vh;
+  max-width: 575px !important;
+  font-family: 'Rubik', sans-serif;
+}
+
+.navbar-txt {
+  color: #C0C0C0;
+  text-align:center;
+}
+
+.navbar-txt span {
+  font-size: 0.9rem;
+}
+
+.alb-art {
+  min-width: 80px;
+}
+
+.outer {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(255, 128, 0, 0.95);
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+h2 {
+  color: white;
+  text-align:center;
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.1rem;
+}
+
+.card {
+  background-color: rgba(255, 128, 0, 0.95);
+  border: 1px solid white !important;
+  border-radius: 4px !important;
+}
+
+.card-tit * {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 3px 0 3px 10px;
+}
+
+.card-tit:hover * {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  color: rgba(255, 128, 0, 1.0);
+}
+
+.btn-link {
+  color: #C0C0C0;
+}
+
+.btn-link:hover, .btn-link:active, .btn-link:focus {
+  text-decoration: none;
+  color: rgba(255, 128, 0, 1.0);
+}
+
+.btn-link, .btn-secondary {
+  -webkit-transition: transform 0.3s cubic-bezier(1,1,.43,1.23);
+  transition: transform 0.3s cubic-bezier(1,1,.43,1.23);
+}
+
+.btn-link:active, .btn-secondary:active {
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+.modal.fade {
+  -webkit-transition: all 0.7s cubic-bezier(1,1,.43,1.23);
+  transition: all 0.7s cubic-bezier(1,1,.43,1.23);
+}
+
+.modal-header {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal-title {
+  font-size: 1.2rem;
+}
+
+.modal-body {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-minus {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  font-size: 0.8em;
+  border-radius: 10%;
+  -webkit-transition: transform 0.3s cubic-bezier(0,.29,0,.29);
+  transition: transform 0.3s cubic-bezier(0,.29,0,.29);
+}
+
+.btn-minus:hover {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.btn-info {
+  -webkit-transition: transform 0.3s cubic-bezier(0,.29,0,.29);
+  transition: transform 0.3s cubic-bezier(0,.29,0,.29);
+}
+
+.btn-info:hover {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.browserupgrade {
+  background-color: white;
+  margin-top: 1rem;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.social-icons * {
+  padding: 0;
+}
+
+.social-icons img {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 15%;
+  margin-bottom: 0.5rem;
+}
+
+/* =================================================
+   =         Bootstrap 4.0 Media Queries             =
+   ================================================= */
+
+/* ------------ Mobile First Method ------------ */
+/*
+/* Extra small devices (portrait phones, less than 576px) */ 
+@media screen and (max-width : 576px) {
+  body {
+    padding: 0;
+  }
+  .list-tit {
+    font-size: 1.2rem;
+  }
+  .navbar-txt {
+    font-size: 0.75rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */ 
+@media screen and (min-width : 576px) {
+  .list-tit {
+    font-size: 1.75rem;
+  }
+}
