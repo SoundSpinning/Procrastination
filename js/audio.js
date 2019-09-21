@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 // 
 // Play/Pause tracks with single play click
-// Note: it doesn't work yet on iOS devices ...
+// Note: it works on iOS devices
 window.onload = init;
 function init() {
     document.addEventListener('play', function (e) {
@@ -22,6 +22,9 @@ function init() {
         e.target.addEventListener('ended', function(){
             var indexT = Array.prototype.indexOf.call(allTracks, e.target);
             if (indexT != null) {
+                if (indexT == allTracks.length-1) {
+                    indexT = -1;
+                }
                 allTracks[indexT+1].play();
             }
         });
