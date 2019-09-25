@@ -27,7 +27,7 @@ function init() {
                 if (indexT == allTracks.length-1) {
                     indexT = -1;
                 }
-            allTracks[indexT+1].load();
+//             allTracks[indexT+1].load();
             allTracks[indexT+1].play();
             }
         });
