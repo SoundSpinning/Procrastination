@@ -2,9 +2,14 @@
 /* CSS for Audio Blind Test app */
 /**/
 body {
-  padding-top: 2vh;
+  padding-top: 1vh;
   max-width: 575px !important;
   font-family: 'Rubik', sans-serif;
+}
+
+body * {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .navbar-txt {
@@ -22,7 +27,7 @@ body {
 
 .outer {
   background-color: rgba(0, 0, 0, 0.8);
-  border: 2px solid rgba(255, 128, 0, 0.95);
+  border: 3px solid rgba(255, 128, 0, 0.95);
   border-radius: 10px;
 }
 
@@ -55,7 +60,7 @@ h6 {
 }
 
 .card-tit:hover * {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
   color: rgba(255, 128, 0, 1.0);
 }
@@ -64,19 +69,19 @@ h6 {
   color: #C0C0C0;
 }
 
-.btn-link:hover, .btn-link:active, .btn-link:focus {
+.btn-link:hover, .btn-link:active {
+  text-decoration: none;
+  color: rgba(255, 128, 0, 1.0);
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+.btn-link:focus {
   text-decoration: none;
   color: rgba(255, 128, 0, 1.0);
 }
-
 .btn-link, .btn-secondary {
-  -webkit-transition: transform 0.3s cubic-bezier(1,1,.43,1.23);
-  transition: transform 0.3s cubic-bezier(1,1,.43,1.23);
-}
-
-.btn-link:active, .btn-secondary:active {
-  -webkit-transform: scale(0.95);
-  transform: scale(0.95);
+  -webkit-transition: all 0.7s cubic-bezier(1,1,.43,1.23);
+  transition: all 0.7s cubic-bezier(1,1,.43,1.23);
 }
 
 .modal.fade {
@@ -107,7 +112,7 @@ h6 {
   right: 10px;
   background-color: transparent;
   font-size: 0.8em;
-  border-radius: 10%;
+  border-radius: 5px;
   -webkit-transition: transform 0.3s cubic-bezier(0,.29,0,.29);
   transition: transform 0.3s cubic-bezier(0,.29,0,.29);
 }
@@ -135,15 +140,37 @@ h6 {
 }
 
 .social-icons * {
-  padding: 0;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+.social-icons img:hover {
+  background-color: rgb(87, 252, 16);
 }
 
-.social-icons img {
-  width: 25px;
-  height: 25px;
-  background-color: white;
-  border-radius: 15%;
-  margin-bottom: 0.5rem;
+/* ------------- Badge Landing Settings ------------*/
+.land-1 {
+  width: 250px !important;
+  height: 250px !important;
+  border-radius: 50%;
+}
+
+.land-1.back {
+  background-image: url("../assets/EP-2018-sm.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 73%;
+}
+
+.land-2.accordion {
+  top: 200px;
+  position: relative;
+}
+
+.no-show {
+  display: none !important;
 }
 
 /* =================================================
@@ -154,20 +181,17 @@ h6 {
 /*
 /* Extra small devices (portrait phones, less than 576px) */ 
 @media screen and (max-width : 576px) {
-  body {
-    padding: 0;
-  }
   .list-tit {
     font-size: 1.2rem;
   }
   .navbar-txt {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 }
 
 /* Small devices (landscape phones, 576px and up) */ 
 @media screen and (min-width : 576px) {
   .list-tit {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
