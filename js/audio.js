@@ -1,9 +1,26 @@
 /**/
-/* JScript for Audio Blind Test app */
+/* JScript for Audio Blind Test / Music Badge apps */
 /**/
 // Initialize Tooltip
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip({trigger: 'hover'});
+});
+
+var isNoShow = document.querySelectorAll('.no-show');
+var isLand1 = document.querySelectorAll('.land-1');
+var isLand2 = document.querySelectorAll('.land-2');
+var isTracks = document.querySelector('#Tracks');
+
+isTracks.addEventListener('click', function () {
+    for (var i = 0, len = isNoShow.length; i < len; i++) {
+        isNoShow[i].classList.toggle('no-show');
+    }
+    for (var i = 0, len = isLand1.length; i < len; i++) {
+        isLand1[i].classList.toggle('land-1');
+    }
+    for (var i = 0, len = isLand2.length; i < len; i++) {
+        isLand2[i].classList.toggle('land-2');
+    }
 });
 
 // 
@@ -27,7 +44,6 @@ function init() {
                 if (indexT == allTracks.length-1) {
                     indexT = -1;
                 }
-//             allTracks[indexT+1].load();
             allTracks[indexT+1].play();
             }
         });
