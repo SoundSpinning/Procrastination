@@ -147,7 +147,7 @@ h6 {
   margin-bottom: 0.5rem;
 }
 .social-icons img:hover {
-  background-color: rgb(87, 252, 16);
+  background-color: rgba(255, 128, 0, 0.95);
 }
 
 /* ------------- Badge Landing Settings ------------*/
