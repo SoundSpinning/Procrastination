@@ -11,7 +11,8 @@ Small music web app for artists featuring:
 * Artwork
 * Contact
 
-<a href="https://codepen.io/Sound_Spinning/full/wYpZdq/">
+<a href="https://SoundSpinning.github.com/Procrastination">
   <img src="assets/Music-Badge-sm.jpg" alt="MIGHT Music Badge Procrastination">
 </a>
+
 ---
