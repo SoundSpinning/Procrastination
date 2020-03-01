@@ -26,7 +26,7 @@ body * {
 }
 
 .outer {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   border: 3px solid rgba(255, 128, 0, 0.95);
   border-radius: 10px;
 }
