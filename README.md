@@ -10,6 +10,7 @@ Small music web app for artists featuring:
 * Lyrics
 * Artwork
 * Contact
+* Download link
 
 <a href="https://SoundSpinning.github.io/Procrastination">
   <img src="assets/Music-Badge-sm.jpg" alt="MIGHT Music Badge Procrastination">
