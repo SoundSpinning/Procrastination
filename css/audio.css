@@ -4,17 +4,13 @@
 body {
   padding-top: 1vh;
   max-width: 575px !important;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 body * {
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
-
-/* span[data-bs-toggle="tooltip"] {
-  display: inline-block;
-} */
 
 .navbar-txt {
   color: #C0C0C0;
@@ -173,7 +169,6 @@ i.bi {
   width: 32px;
   height: 32px;
   text-decoration: none;
-  /* background-color: orange; */
   border-radius: 5px;
   margin-bottom: 0.5rem;
 }
