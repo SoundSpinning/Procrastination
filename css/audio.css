@@ -1,5 +1,5 @@
 /**/
-/* CSS for Audio Blind Test app */
+/* CSS for Audio Blind Test & Music Badge apps */
 /**/
 body {
   padding-top: 1vh;
@@ -11,6 +11,10 @@ body * {
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
+
+/* span[data-bs-toggle="tooltip"] {
+  display: inline-block;
+} */
 
 .navbar-txt {
   color: #C0C0C0;
@@ -66,6 +70,7 @@ h6 {
 }
 
 .btn-link {
+  text-decoration: none;
   color: #C0C0C0;
 }
 
@@ -106,30 +111,55 @@ h6 {
   max-width: 400px;
 }
 
+i.bi {
+  font-size: 1.3rem;
+}
+
 .btn-minus {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
-  font-size: 0.8em;
-  border-radius: 5px;
+  padding: 0px;
+  margin: 0px;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 30px;
+  height: 30px;
+  border-width: 0px;
+  color: whitesmoke;
+  background-color: teal;
   -webkit-transition: transform 0.3s cubic-bezier(0,.29,0,.29);
   transition: transform 0.3s cubic-bezier(0,.29,0,.29);
+}
+
+.btn-minus i {
+  line-height: initial;
+  display: inline-block;
+  width: 95%;
+  height: 95%;
 }
 
 .btn-minus:hover {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+  background-color: whitesmoke;
+  color: black;
 }
 
 .btn-info {
   -webkit-transition: transform 0.3s cubic-bezier(0,.29,0,.29);
   transition: transform 0.3s cubic-bezier(0,.29,0,.29);
+  color: whitesmoke;
+  border-width: 0px;
+  background-color: teal;
+  line-height: initial;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
 }
 
 .btn-info:hover {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
+  background-color: whitesmoke;
 }
 
 .browserupgrade {
@@ -142,7 +172,8 @@ h6 {
 .social-icons * {
   width: 32px;
   height: 32px;
-  background-color: white;
+  text-decoration: none;
+  /* background-color: orange; */
   border-radius: 5px;
   margin-bottom: 0.5rem;
 }
@@ -173,13 +204,15 @@ h6 {
   display: none !important;
 }
 
+
 /* =================================================
-   =         Bootstrap 4.0 Media Queries             =
+   =         Bootstrap 5.0 Media Queries             =
    ================================================= */
 
 /* ------------ Mobile First Method ------------ */
 /*
-/* Extra small devices (portrait phones, less than 576px) */ 
+/* X-Small [none] devices (portrait phones, < 576px) */ 
+/* No media query for `xs` since this is the default in Bootstrap */
 @media screen and (max-width : 576px) {
   .list-tit {
     font-size: 1.2rem;
@@ -189,9 +222,14 @@ h6 {
   }
 }
 
-/* Small devices (landscape phones, 576px and up) */ 
+/* Small [sm] devices (landscape phones, >= 576px) */ 
 @media screen and (min-width : 576px) {
   .list-tit {
     font-size: 1.5rem;
   }
 }
+
+/* Medium [md] devices (tablets, >= 768px) */ 
+/* Large [lg] devices (desktops, >= 992px) */ 
+/* Extra Large [xl] devices (large desktops, >= 1200px) */ 
+/* Extra extra Large [xxl] devices (larger desktops, >= 1400px) */ 

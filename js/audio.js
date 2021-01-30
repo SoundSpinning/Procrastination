@@ -1,10 +1,12 @@
 /**/
 /* JScript for Audio Blind Test / Music Badge apps */
 /**/
-// Initialize Tooltip
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip({trigger: 'hover'});
-});
+
+// Initialise BS Tooltips
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 
 var isNoShow = document.querySelectorAll('.no-show');
 var isLand1 = document.querySelectorAll('.land-1');
@@ -25,7 +27,7 @@ isTracks.addEventListener('click', function () {
 
 // 
 // Play/Pause tracks with single play click & when ended it moves to next track
-// Note: it should works on iOS devices
+// Note: it should work on iOS devices
 window.onload = init;
 function init() {
     document.addEventListener('play', function (e) {
@@ -49,10 +51,3 @@ function init() {
         });
     }, true);
 }
-
-// SiriWave settings
-// var siriWave = new SiriWave({
-//     container: document.getElementById('siri-container'),
-//     width: 640,
-//     height: 200,
-// });
