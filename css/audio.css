@@ -1,6 +1,14 @@
 /**/
 /* CSS for Audio Blind Test & Music Badge apps */
 /**/
+
+/* Declare general global properties as vars */
+:root {
+  --color-1: rgba(255, 128, 0, 0.95);
+  --color-2: whitesmoke;
+  --txt-col-1:  #C0C0C0;
+}
+
 body {
   padding-top: 1vh;
   max-width: 575px !important;
@@ -12,8 +20,21 @@ body * {
   transition: all 1s ease-in-out;
 }
 
+audio {
+  background-color: var(--color-2);
+  border-radius: 10px;
+}
+
+audio:hover, audio:focus-within {
+  background-color:gray;
+}
+
+label {
+  color: var(--txt-col-1);
+}
+
 .navbar-txt {
-  color: #C0C0C0;
+  color: var(--color-2);
   text-align:center;
 }
 
@@ -21,13 +42,9 @@ body * {
   font-size: 0.9rem;
 }
 
-.alb-art {
-  min-width: 80px;
-}
-
 .outer {
   background-color: rgba(0, 0, 0, 0.9);
-  border: 3px solid rgba(255, 128, 0, 0.95);
+  border: 3px solid var(--color-1);
   border-radius: 10px;
 }
 
@@ -36,53 +53,73 @@ h1 {
 }
 
 h2 {
-  color: white;
+  color: var(--color-2);
   text-align:center;
   font-size: 1.5rem;
 }
 
 h6 {
-  font-family: 'Rubik', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
+  color: #454545;
+}
+
+.bi-soundwave {
+  font-size: 1.45rem !important;
+  color: crimson;
 }
 
 .card {
-  background-color: rgba(255, 128, 0, 0.95);
-  border: 1px solid white !important;
-  border-radius: 4px !important;
+  background-color: var(--color-1);
+  border: 1px solid var(--color-2) !important;
+  border-radius: 5px !important;
+}
+
+.card-body {
+  border-radius: 5px !important;
 }
 
 .card-tit * {
-  color: white;
+  color: var(--color-2);
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   padding: 3px 0 3px 10px;
 }
 
 .card-tit:hover * {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--color-2);
+  border-color: black;
   text-decoration: none;
-  color: rgba(255, 128, 0, 1.0);
+  color: black !important;
 }
 
 .btn-link {
   text-decoration: none;
-  color: #C0C0C0;
+  color: var(--txt-col-1);
 }
 
 .btn-link:hover, .btn-link:active {
   text-decoration: none;
-  color: rgba(255, 128, 0, 1.0);
-  -webkit-transform: scale(0.95);
-  transform: scale(0.95);
+  color: var(--color-1);
+  /* -webkit-transform: scale(0.95);
+  transform: scale(0.95); */
 }
 .btn-link:focus {
   text-decoration: none;
-  color: rgba(255, 128, 0, 1.0);
+  color: var(--color-1);
 }
 .btn-link, .btn-secondary {
   -webkit-transition: all 0.7s cubic-bezier(1,1,.43,1.23);
   transition: all 0.7s cubic-bezier(1,1,.43,1.23);
+}
+
+.btn-secondary {
+  color: whitesmoke;
+  background-color: teal;
+}
+
+.btn-secondary.btn-link:hover {
+  border-color: whitesmoke;
+  background-color: transparent;
 }
 
 .modal.fade {
@@ -91,12 +128,13 @@ h6 {
 }
 
 .modal-header {
-  color: white;
+  color: var(--color-2);
   background-color: rgba(0, 0, 0, 0.75);
 }
 
 .modal-title {
   font-size: 1.2rem;
+  color: var(--txt-col-1);
 }
 
 .modal-body {
@@ -120,7 +158,7 @@ i.bi {
   width: 30px;
   height: 30px;
   border-width: 0px;
-  color: whitesmoke;
+  color: var(--color-2);
   background-color: teal;
   -webkit-transition: transform 0.3s cubic-bezier(0,.29,0,.29);
   transition: transform 0.3s cubic-bezier(0,.29,0,.29);
@@ -136,14 +174,14 @@ i.bi {
 .btn-minus:hover {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
-  background-color: whitesmoke;
+  background-color: var(--color-2);
   color: black;
 }
 
 .btn-info {
   -webkit-transition: transform 0.3s cubic-bezier(0,.29,0,.29);
   transition: transform 0.3s cubic-bezier(0,.29,0,.29);
-  color: whitesmoke;
+  color: var(--color-2);
   border-width: 0px;
   background-color: teal;
   line-height: initial;
@@ -155,11 +193,15 @@ i.bi {
 .btn-info:hover {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
-  background-color: whitesmoke;
+  background-color: var(--color-2);
+}
+
+.list-tit {
+  color: var(--txt-col-1);
 }
 
 .browserupgrade {
-  background-color: white;
+  background-color: var(--color-2);
   margin-top: 1rem;
   padding: 1rem;
   z-index: 1000;
@@ -173,7 +215,7 @@ i.bi {
   margin-bottom: 0.5rem;
 }
 .social-icons img:hover {
-  background-color: rgba(255, 128, 0, 0.95);
+  background-color: var(--color-1);
 }
 
 /* ------------- Badge Landing Settings ------------*/
@@ -210,7 +252,7 @@ i.bi {
 /* No media query for `xs` since this is the default in Bootstrap */
 @media screen and (max-width : 576px) {
   .list-tit {
-    font-size: 1.2rem;
+    font-size: 1.15rem !important;
   }
   .navbar-txt {
     font-size: 0.8rem;
@@ -220,7 +262,7 @@ i.bi {
 /* Small [sm] devices (landscape phones, >= 576px) */ 
 @media screen and (min-width : 576px) {
   .list-tit {
-    font-size: 1.5rem;
+    font-size: 1.45rem !important;
   }
 }
 
